@@ -1,5 +1,5 @@
 {
-  "name": "angular2-quickstart",
+  "name": "angular2-tour-of-heroes",
   "version": "1.0.0",
   "scripts": {
     "postinstall": "npm run typings install",
