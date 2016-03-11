@@ -9,10 +9,12 @@ based on https://angular.io/docs/ts/latest/tutorial/ - 2016-02-18
 
 ## steps
 
-1. > git clone https://github.com/fabiorecife/angular2-tour-of-heroes.git
-2. > cd angular2-tour-of-heroes
-3. > npm install
-4. > npm start
+```shell
+git clone https://github.com/fabiorecife/angular2-tour-of-heroes.git
+cd angular2-tour-of-heroes
+npm install
+npm start
+```
 
 # tools
 
