@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { RouteParams} from '@angular/router-deprecated';
+import { OnActivate, Router, RouteSegment } from '@angular/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
 
@@ -13,16 +13,19 @@ export class HeroDetailComponent {
   hero:Hero;
   constructor(
     private _heroService: HeroService,
-    private _routeParams: RouteParams
+    private router: Router
   ) {
 
   }
-  ngOnInit() {
-    let id = + this._routeParams.get('id');
-    this._heroService.getHero(id)
-      .then(hero => this.hero = hero);
+  routerOnActivate(curr: RouteSegment): void {
+    let id = +curr.getParam('id');
+    this._heroService.getHero(id).then(hero => this.hero = hero);
+  }
+  gotoHeroes() {
+    // Like <a [routerLink]="['/heroes']">Heroes</a>
+    this.router.navigate(['/heroes']);
   }
   goBack() {
-    window.history.back();
-  }
+   window.history.back();
+  } 
 }
