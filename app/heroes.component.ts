@@ -1,11 +1,11 @@
-import {Component} from 'angular2/core';
-import {Router} from 'angular2/router';
+import {Component} from '@angular2/core';
+import {Router} from '@angular2/router';
 
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HEROES} from './mock-heroes';
 import {HeroService} from './hero.service';
-import {OnInit} from 'angular2/core';
+import {OnInit} from '@angular2/core';
 
 
 @Component({
