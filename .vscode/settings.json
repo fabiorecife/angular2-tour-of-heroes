@@ -6,7 +6,10 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.DS_Store": true,
-        "**/*.js": { "when": "$(basename).ts"},
-        "app/*.js.map": true
+        "app/**/.spec.ts": true,
+        "app/**/.spec.js.map": true,
+        "app/**/.js": { "when": "$(basename).ts"},
+        "app/**/.js.map": true,
+        "app/**/.spec.js": true
     }
 }
